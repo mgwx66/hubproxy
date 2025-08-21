@@ -53,4 +53,4 @@ jobs:
             --build-arg VERSION=${{ env.VERSION }} \
             -f Dockerfile .
         env:
-          GHCR_PUBLIC: true  # 将镜像设置为公开
+          GHCR_PUBLIC: false  # 将镜像设置为公开
