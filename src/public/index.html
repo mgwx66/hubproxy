@@ -3,11 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Github文件加速、docker镜像加速">
-    <meta name="keywords" content="Github、文件加速、ghproxy、docker镜像加速">
+    <title>WGET.LA - GitHub文件加速、Docker镜像加速与Hugging Face下载加速</title>
+    <meta name="description" content="WGET.LA 提供 GitHub 文件加速、Release 下载加速、Raw 文件加速、Docker 镜像加速、ghcr.io / quay.io / registry.k8s.io 镜像拉取加速和 Hugging Face 仓库下载加速服务。">
+    <meta name="keywords" content="GitHub文件加速,GitHub下载加速,GitHub Release加速,GitHub Raw加速,Docker镜像加速,ghcr.io加速,quay.io加速,Hugging Face下载加速,ghproxy,wget加速">
+    <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+    <meta name="theme-color" content="#2563eb">
     <meta name="color-scheme" content="dark light">
-    <title>Github、Docker加速</title>
+    <link rel="canonical" href="https://wget.la/">
+    <link rel="alternate" hreflang="zh-CN" href="https://wget.la/">
     <link rel="icon" href="/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="WGET.LA">
+    <meta property="og:title" content="WGET.LA - GitHub文件加速与Docker镜像加速">
+    <meta property="og:description" content="一键转换 GitHub、Docker、Hugging Face 等资源的加速下载链接，支持 Release、Raw、ghcr.io、quay.io、registry.k8s.io 等常见场景。">
+    <meta property="og:url" content="https://wget.la/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="WGET.LA - GitHub文件加速与Docker镜像加速">
+    <meta name="twitter:description" content="快速生成 GitHub 文件、Docker 镜像和 Hugging Face 仓库的加速下载链接。">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://wget.la/#website",
+          "url": "https://wget.la/",
+          "name": "WGET.LA",
+          "description": "GitHub 文件加速、Docker 镜像加速与 Hugging Face 下载加速服务。",
+          "inLanguage": "zh-CN"
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://wget.la/#app",
+          "name": "WGET.LA GitHub 文件加速工具",
+          "url": "https://wget.la/",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "description": "在线生成 GitHub Release、Raw 文件、Docker 镜像和 Hugging Face 仓库的加速下载链接。",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://wget.la/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "WGET.LA 支持哪些 GitHub 链接加速？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "支持 github.com、raw.githubusercontent.com、gist.githubusercontent.com 等常见 GitHub 文件、Release 附件和 Raw 文件链接。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "如何使用 Docker 镜像加速？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "在镜像名称前添加 wget.la 域名即可，例如 docker pull wget.la/nginx，也支持 ghcr.io、quay.io、registry.k8s.io 等镜像仓库。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "是否支持 Hugging Face 下载加速？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "支持 huggingface.co 和 cdn-lfs.hf.co 相关仓库文件链接，可通过输入框自动生成加速链接。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <style>
         :root {
             --background: #ffffff;
@@ -488,6 +560,71 @@
             }
         }
 
+
+
+        .seo-content {
+            animation-delay: 0.5s;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .feature-item {
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p,
+        .usage-list,
+        .faq-list p {
+            color: var(--muted-foreground);
+            font-size: 0.9375rem;
+        }
+
+        .usage-list {
+            padding-left: 1.25rem;
+        }
+
+        .usage-list li {
+            margin-bottom: 0.625rem;
+        }
+
+        code {
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: 0.375rem;
+            padding: 0.125rem 0.375rem;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.875em;
+        }
+
+        .faq-list details {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            background-color: var(--card);
+        }
+
+        .faq-list summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .faq-list p {
+            margin-top: 0.75rem;
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
@@ -561,6 +698,10 @@
                 flex-direction: column;
                 gap: 0.75rem;
             }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         .mobile-menu-toggle {
@@ -572,7 +713,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="/" class="logo">
+            <a href="/" class="logo" aria-label="WGET.LA GitHub文件加速首页">
                 <div class="logo-icon">
                     ⚡
                 </div>
@@ -599,9 +740,9 @@
     <main class="main">
         <div class="container">
             <div class="hero">
-                <h1 class="hero-title">GitHub 文件加速</h1>
+                <h1 class="hero-title">GitHub 文件加速与 Docker 镜像加速</h1>
                 <p class="hero-subtitle">
-                    快速下载GitHub上的文件和仓库，解决国内访问GitHub速度慢的问题，支持Docker镜像加速和Hugging Face仓库。
+                    WGET.LA 提供 GitHub Release、Raw 文件、Docker 镜像、ghcr.io、quay.io、registry.k8s.io 与 Hugging Face 仓库的加速下载链接转换服务。
                 </p>
             </div>
 
@@ -611,7 +752,7 @@
                         ⚡ 快速转换加速链接
                     </h2>
                     <p class="card-description">
-                        输入GitHub文件链接，自动转换加速链接，可以直接在Github文件链接前加上本站域名使用。
+                        输入GitHub文件链接，自动转换加速链接，可以直接在GitHub文件链接前加上本站域名使用。
                     </p>
                 </div>
 
@@ -622,6 +763,7 @@
                             class="input" 
                             id="githubLinkInput" 
                             placeholder="请输入GitHub文件链接，例如：https://github.com/user/repo/releases/download/..."
+                            aria-label="输入 GitHub、Hugging Face 或 Docker 下载链接"
                         >
                         <button class="button button-primary" id="formatButton">
                             获取加速链接
@@ -660,6 +802,63 @@
                     查看 Docker 镜像加速使用说明
                 </button>
             </div>
+
+            <section class="card seo-content" aria-labelledby="features-title">
+                <div class="card-header">
+                    <h2 class="card-title" id="features-title">🚀 支持的加速场景</h2>
+                    <p class="card-description">面向开发者、运维人员和需要下载开源项目资源的用户，快速生成可复制、可打开的加速链接。</p>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-item">
+                        <h3>GitHub Release 下载加速</h3>
+                        <p>适用于 GitHub 项目发布页中的安装包、压缩包、二进制文件和其他 Release 附件下载。</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>GitHub Raw 文件加速</h3>
+                        <p>支持 raw.githubusercontent.com 与 gist.githubusercontent.com 文件链接，适合脚本、配置文件和源码文件下载。</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>Docker 镜像拉取加速</h3>
+                        <p>支持 Docker Hub、ghcr.io、quay.io、registry.k8s.io 等镜像仓库，降低镜像拉取失败和超时概率。</p>
+                    </article>
+                    <article class="feature-item">
+                        <h3>Hugging Face 文件加速</h3>
+                        <p>支持 huggingface.co 与 cdn-lfs.hf.co 仓库资源，适合模型文件、数据集文件和 LFS 文件下载。</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="card seo-content" aria-labelledby="usage-title">
+                <div class="card-header">
+                    <h2 class="card-title" id="usage-title">📘 使用方法</h2>
+                </div>
+                <ol class="usage-list">
+                    <li>复制需要下载的 GitHub、Hugging Face 或 Docker 相关链接。</li>
+                    <li>粘贴到上方输入框，点击“获取加速链接”。</li>
+                    <li>复制生成后的链接，或点击“打开链接”直接访问下载。</li>
+                    <li>Docker 镜像可在镜像名称前添加 <code>wget.la/</code>，例如 <code>docker pull wget.la/nginx</code>。</li>
+                </ol>
+            </section>
+
+            <section class="card seo-content" aria-labelledby="faq-title">
+                <div class="card-header">
+                    <h2 class="card-title" id="faq-title">❓ 常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>WGET.LA 支持哪些 GitHub 链接加速？</summary>
+                        <p>支持 github.com、raw.githubusercontent.com、gist.githubusercontent.com 等常见 GitHub 文件、Release 附件和 Raw 文件链接。</p>
+                    </details>
+                    <details>
+                        <summary>如何使用 Docker 镜像加速？</summary>
+                        <p>在镜像名称前添加 wget.la 域名即可，例如 <code>docker pull wget.la/nginx</code>，也支持 ghcr.io、quay.io、registry.k8s.io 等镜像仓库。</p>
+                    </details>
+                    <details>
+                        <summary>是否支持 Hugging Face 下载加速？</summary>
+                        <p>支持 huggingface.co 和 cdn-lfs.hf.co 相关仓库文件链接，可通过输入框自动生成加速链接。</p>
+                    </details>
+                </div>
+            </section>
         </div>
     </main>
 <div class="container">
@@ -672,7 +871,7 @@
 							<source media="(min-width:992px)" srcset="https://img.imgdd.com/fe90319f-d9d5-4166-97a9-2b792d7848a6.png">
 							<source media="(min-width:768px)" srcset="https://img.imgdd.com/fe90319f-d9d5-4166-97a9-2b792d7848a6.png">
 							<source media="(min-width:576px)" srcset="https://img.imgdd.com/fe90319f-d9d5-4166-97a9-2b792d7848a6.png">
-							<img src="https://img.imgdd.com/fe90319f-d9d5-4166-97a9-2b792d7848a6.png" class="rounded" alt="Image" style="max-width: 100%; --bs-border-radius: calc(0.5rem - 2px);">
+							<img src="https://img.imgdd.com/fe90319f-d9d5-4166-97a9-2b792d7848a6.png" class="rounded" alt="WGET.LA 合作推广横幅" style="max-width: 100%; --bs-border-radius: calc(0.5rem - 2px);">
 						</picture>
 					</a>
 				</div>
@@ -710,6 +909,7 @@
     </div>
 
 <footer class="footer">
+        <noscript>WGET.LA 支持 GitHub 文件加速、Docker 镜像加速和 Hugging Face 下载加速。启用 JavaScript 可使用在线链接转换工具。</noscript>
         Copyright © 2024-2025 WGET.LA. All Rights Reserved.
     </footer>
 
