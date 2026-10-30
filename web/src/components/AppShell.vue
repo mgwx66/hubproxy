@@ -4,7 +4,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import { Container, Github, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
-import { Globe } from "lucide-react"; 
+import { Container, Github, Globe, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
 
 const STORAGE_KEY = 'theme'
 const route = useRoute()
@@ -110,11 +110,11 @@ onMounted(() => {
   <a
     href="https://cdn.ci"
     target="_blank"
-    rel="nopener noreferrer"
+    rel="noopener noreferrer"
     aria-label="EdgeRoute"
-    className="text-muted-foreground transition-colors duration-150 hover:text-foreground"
+    class="text-muted-foreground transition-colors duration-150 hover:text-foreground"
   >
-    <Globe className="size-5" />
+    <Globe class="size-5" />
   </a>
 
     </footer>
