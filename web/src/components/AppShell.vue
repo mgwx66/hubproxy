@@ -4,6 +4,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import { Container, Github, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
+import { Globe } from "lucide-react"; 
 
 const STORAGE_KEY = 'theme'
 const route = useRoute()
@@ -106,15 +107,16 @@ onMounted(() => {
     </main>
 
     <footer class="flex justify-center pb-10 pt-2">
-      <a
-        href="https://github.com/sky22333/hubproxy"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-        class="text-muted-foreground transition-colors duration-150 hover:text-foreground"
-      >
-        <Github class="size-5" />
-      </a>
+  <a
+    href="https://cdn.ci"
+    target="_blank"
+    rel="nopener noreferrer"
+    aria-label="EdgeRoute"
+    className="text-muted-foreground transition-colors duration-150 hover:text-foreground"
+  >
+    <Globe className="size-5" />
+  </a>
+
     </footer>
   </div>
 </template>
