@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import { Container, Github, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
+import { Container, Globe, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
 import Button from '@/components/ui/Button.vue'
 import ThemeToggle from '@/components/ThemeToggle.vue'
-import { Container, Github, Globe, Menu, Rocket, Search, X, Zap } from 'lucide-vue-next'
 
 const STORAGE_KEY = 'theme'
 const route = useRoute()
